@@ -1,0 +1,6 @@
+# dsh-staging-guard bundle patch
+# 挂上 tools/pre-execute：拒绝写入受保护根下「成果区/」的文件，
+# 其余工具与路径一律放行（只拦 write / edit / str_replace_editor）。
+- insert:
+    - id: staging-guard
+      name: dsh-staging-guard

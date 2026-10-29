@@ -1,0 +1,40 @@
+{
+  "name": "dsh-staging-guard",
+  "version": "1.0.0",
+  "description": "DSH pre-execute hook: deny writes under a read-only result zone (成果区) of protected roots. Everything else passes through.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "pre-execute",
+    "hook",
+    "guard",
+    "read-only"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdl233/dsh-staging-guard.git"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node test-scope.mjs"
+  }
+}
